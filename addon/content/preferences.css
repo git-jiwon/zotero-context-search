@@ -1,0 +1,68 @@
+#zcs-citation-short, #zcs-citation-long, #zcs-citation-manage {
+  min-width: 0;
+}
+#zcs-citation-short .zcs-citation-description,
+#zcs-citation-long .zcs-citation-description,
+#zcs-citation-save-status {
+  color: var(--fill-secondary, #626773);
+  line-height: 1.55;
+  margin-block: 8px 12px;
+}
+#zcs-citation-short .zcs-citation-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 12px 16px;
+  margin-block: 8px 18px;
+}
+#zcs-citation-short .zcs-citation-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+#zcs-citation-short .zcs-citation-form {
+  display: grid;
+  grid-template-columns: max-content minmax(180px, 1fr);
+  gap: 12px 20px;
+  align-items: center;
+}
+#zcs-citation-short select,
+#zcs-citation-long select {
+  min-width: 0;
+  max-width: 100%;
+  padding: 5px 8px;
+}
+#zcs-citation-start-number {
+  width: 90px;
+}
+#zcs-citation-long-mode {
+  margin-block: 8px;
+}
+#zcs-citation-short .zcs-citation-preview,
+#zcs-citation-long .zcs-citation-preview {
+  margin-block: 6px 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--material-border, #c9cdd3);
+  border-radius: 6px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  user-select: text;
+  background: var(--material-background, #f7f8fa);
+}
+#zcs-citation-short h3,
+#zcs-citation-long h3 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-block: 12px 4px;
+}
+#zcs-citation-short [aria-invalid="true"] {
+  outline: 2px solid var(--accent-red, #b72b2b);
+}
+#zcs-citation-short :focus-visible,
+#zcs-citation-long :focus-visible,
+#zcs-citation-manage :focus-visible {
+  outline: 2px solid var(--focus-border, #3875d7);
+  outline-offset: 2px;
+}
+#zcs-citation-long [hidden] {
+  display: none !important;
+}

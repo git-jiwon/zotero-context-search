@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Zotero Context Search",
+  "version": "1.0.0",
+  "description": "Search Zotero metadata and indexed PDF text with matching context, star favorite references, and copy citations or original files.",
+  "author": "Zotero Context Search contributors",
+  "icons": {
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "applications": {
+    "zotero": {
+      "id": "context-search@local.zotero",
+      "update_url": "https://github.com/git-jiwon/zotero-context-search/releases/latest/download/updates.json",
+      "strict_min_version": "9.0",
+      "strict_max_version": "*"
+    }
+  },
+  "homepage_url": "https://github.com/git-jiwon/zotero-context-search"
+}

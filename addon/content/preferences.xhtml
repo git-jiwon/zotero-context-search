@@ -1,0 +1,54 @@
+<groupbox id="zcs-citation-short" onload="Zotero.ContextSearchPlugin.preferences.mount(document)">
+  <label><html:h2 data-zcs-i18n="shortTitle">Short citations</html:h2></label>
+  <html:p class="zcs-citation-description" data-zcs-i18n="shortDescription">Choose the information to include in citations for your slides. Changes save immediately.</html:p>
+  <html:div class="zcs-citation-options" role="group" aria-label="Fields included in short citations" data-zcs-i18n-aria-label="shortFields">
+    <html:label><html:input type="checkbox" data-zcs-citation-option="number" /><html:span data-zcs-i18n="number">Number [1]</html:span></html:label>
+    <html:label><html:input type="checkbox" data-zcs-citation-option="title" /><html:span data-zcs-i18n="title">Article title</html:span></html:label>
+    <html:label><html:input type="checkbox" data-zcs-citation-option="journal" /><html:span data-zcs-i18n="journal">Journal</html:span></html:label>
+    <html:label><html:input type="checkbox" data-zcs-citation-option="volume" /><html:span data-zcs-i18n="volume">Volume</html:span></html:label>
+    <html:label><html:input type="checkbox" data-zcs-citation-option="year" /><html:span data-zcs-i18n="year">Year</html:span></html:label>
+    <html:label><html:input type="checkbox" data-zcs-citation-option="doi" /><html:span data-zcs-i18n="doi">DOI link</html:span></html:label>
+  </html:div>
+  <html:div class="zcs-citation-form">
+    <html:label for="zcs-citation-authors" data-zcs-i18n="authors">Authors</html:label>
+    <html:select id="zcs-citation-authors" data-zcs-citation-option="authors">
+      <html:option value="first" data-zcs-i18n="firstAuthor">First author + et al.</html:option>
+      <html:option value="all" data-zcs-i18n="allAuthors">All authors</html:option>
+    </html:select>
+    <html:label for="zcs-citation-journal-style" data-zcs-i18n="journalStyle">Journal name</html:label>
+    <html:select id="zcs-citation-journal-style" data-zcs-citation-option="journalStyle">
+      <html:option value="abbreviated" data-zcs-i18n="abbreviatedJournal">Stored abbreviation (full name if unavailable)</html:option>
+      <html:option value="full" data-zcs-i18n="fullJournal">Full name</html:option>
+    </html:select>
+    <html:label for="zcs-citation-start-number" data-zcs-i18n="startNumber">Starting number</html:label>
+    <html:input id="zcs-citation-start-number" type="number" min="1" max="2147483647" step="1" data-zcs-citation-option="startNumber" aria-describedby="zcs-citation-number-help" />
+  </html:div>
+  <html:p id="zcs-citation-number-help" class="zcs-citation-description" data-zcs-i18n="numberHelp">When copying several references, numbering begins at the starting number and continues in order.</html:p>
+  <html:h3 data-zcs-i18n="preview">Preview</html:h3>
+  <html:p id="zcs-citation-short-preview" class="zcs-citation-preview" aria-live="polite"></html:p>
+  <html:p class="zcs-citation-description" data-zcs-i18n="exampleDescription">The preview uses a fictional reference. Copied citations use the metadata of your selected references.</html:p>
+</groupbox>
+
+<groupbox id="zcs-citation-long">
+  <label><html:h2 data-zcs-i18n="longTitle">Long citations</html:h2></label>
+  <html:label for="zcs-citation-long-mode" data-zcs-i18n="format">Format</html:label>
+  <html:select id="zcs-citation-long-mode" data-zcs-citation-option="mode" data-zcs-citation-style="long">
+    <html:option value="zotero" data-zcs-i18n="nativeMode">Zotero Quick Copy citation style</html:option>
+    <html:option value="custom" data-zcs-i18n="customMode">Short citation settings + all authors and article title</html:option>
+  </html:select>
+  <html:div id="zcs-citation-long-native">
+    <html:p id="zcs-citation-native-style" aria-live="polite"></html:p>
+    <html:p class="zcs-citation-description" data-zcs-i18n="nativeDescription">Authors, titles, numbering, and punctuation follow the style selected in Zotero. The short citation settings above do not apply.</html:p>
+    <html:button id="zcs-citation-open-export" type="button" data-zcs-i18n="openExport">Open Zotero Quick Copy settings</html:button>
+  </html:div>
+  <html:div id="zcs-citation-long-custom" hidden="hidden">
+    <html:p class="zcs-citation-description" data-zcs-i18n="customDescription">Use the short citation settings above and always include all authors and the article title.</html:p>
+    <html:h3 data-zcs-i18n="preview">Preview</html:h3>
+    <html:p id="zcs-citation-long-preview" class="zcs-citation-preview" aria-live="polite"></html:p>
+  </html:div>
+</groupbox>
+
+<groupbox id="zcs-citation-manage">
+  <html:p id="zcs-citation-save-status" role="status" aria-live="polite" data-zcs-i18n="localSettings">Citation settings are saved on this computer.</html:p>
+  <html:div><html:button id="zcs-citation-reset" type="button" data-zcs-i18n="reset">Restore default citation settings</html:button></html:div>
+</groupbox>

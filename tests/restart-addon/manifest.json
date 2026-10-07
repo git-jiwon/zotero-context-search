@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Context Search isolated restart checks",
+  "version": "0.1.0",
+  "description": "Synthetic restart fixture. Never include this add-on in a release.",
+  "applications": { "zotero": {
+    "id": "context-search-restart-tests@local.zotero",
+    "update_url": "https://example.invalid/context-search-restart-tests-updates.json",
+    "strict_min_version": "10.0",
+    "strict_max_version": "10.*"
+  } }
+}

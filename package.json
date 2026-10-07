@@ -1,0 +1,16 @@
+{
+  "name": "zotero-context-search",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Context search, favorites, and configurable citations for Zotero 9 and newer",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "build": "python scripts/build.py"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/git-jiwon/zotero-context-search",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/git-jiwon/zotero-context-search.git"
+  }
+}
